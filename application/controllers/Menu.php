@@ -13,7 +13,7 @@ class Menu extends CI_Controller
 
     public function index()
     {
-        
+		$data['title'] = 'Sub Menu';
         $data['user'] = $this->db->get_where('admin', ['email' => $this->session->userdata('email')])->row_array();
         $data['menu'] = $this->Menu_model->getMenu();
 
