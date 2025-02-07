@@ -1,0 +1,203 @@
+/* Animasi untuk elemen dengan class 'hantu' */
+@keyframes gerak {
+  0%, 50%, 100% {
+    background: url(asset/hantu.png);
+    background-size: 100%;
+  }
+}
+
+/* Mendefinisikan font-face untuk font custom 'zombies' */
+@font-face {
+  font-family: "zombies";
+  src: url("asset/font/Zombies.ttf") format("truetype");
+}
+
+/* Mengatur font family untuk judul game */
+.game-title {
+  font-family: "zombies";
+}
+
+/* Mengatur gaya untuk elemen body */
+body {
+  color: white;
+  background: url(asset/bg.jpeg);
+  background-size: cover;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Mengatur gaya untuk elemen dengan class 'hantu' */
+.hantu {
+  background: url(asset/hantu.png);
+  width: 100px;
+  height: 85px;
+  background-size: 100%;
+  animation: gerak 0.1s infinite;
+  position: absolute;
+}
+
+/* Mengatur gaya untuk elemen dengan id 'out-score' */
+#out-score {
+  background-color: #111;
+  padding: 15px;
+  color: #fff;
+  font-family: "Garamond", serif;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Mengatur gaya untuk span dalam elemen dengan id 'out-score' */
+#out-score span {
+  font-weight: bold;
+  color: #ffd900;
+}
+
+/* Mengatur gaya untuk elemen dengan id 'container' */
+#container {
+  height: 400px;
+}
+
+/* Mengatur gaya untuk elemen dengan class 'boom' */
+.boom {
+  background: url(asset/bom.png);
+  width: 100px;
+  height: 92px;
+  background-size: 100%;
+  position: absolute;
+}
+
+/* Mengatur gaya untuk elemen dengan id 'welcome' */
+#welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  height: 100vh;
+  background: url(asset/welcome.png);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Mengatur gaya untuk elemen dengan class 'box-menu' dan 'box-leaderboard' */
+.box-menu,
+.box-leaderboard {
+  background: transparent;
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(179, 177, 177, 0.5);
+  text-align: center;
+  font-family: "Garamond", serif;
+  width: 300px;
+}
+
+/* Mengatur gaya untuk elemen input dan select */
+input,
+select {
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 1px gray;
+  width: calc(100% - 20px);
+  margin-bottom: 10px;
+  font-family: "Garamond", serif;
+  box-sizing: border-box;
+}
+
+/* Mengatur gaya untuk elemen button dan anchor (a) */
+button,
+a {
+  background-color: grey;
+  color: white;
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  font-family: "Garamond", serif;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+/* Mengatur gaya untuk elemen dengan id 'leaderboard' */
+#leaderboard {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin-top: 20px;
+}
+
+/* Mengatur gaya untuk elemen li dalam elemen dengan id 'leaderboard' */
+#leaderboard li {
+  background: rgba(155, 155, 155, 0.7);
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Mengatur gaya untuk elemen dengan class 'username' dan 'score' dalam elemen dengan id 'leaderboard' */
+#leaderboard .username,
+#leaderboard .score {
+  font-weight: bold;
+}
+
+/* Mengatur gaya untuk elemen dengan id 'leaderboard-box' */
+#leaderboard-box {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Menyembunyikan scrollbar pada elemen dengan id 'leaderboard-box' */
+#leaderboard-box::-webkit-scrollbar {
+  display: none;
+}
+
+/* Mengatur gaya untuk elemen dengan id 'game-over' */
+#game-over {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  font-family: "Garamond", serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 300px;
+}
+
+/* Mengatur gaya untuk gambar dalam elemen dengan class 'game-over-content' */
+.game-over-content img {
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/* Mengatur gaya untuk elemen h1 dan p dalam elemen dengan class 'game-over-content' */
+.game-over-content h1 p {
+  margin: 10px 0;
+}
+
+/* Mengatur gaya untuk elemen button dan anchor (a) dalam elemen dengan class 'game-over-content' */
+.game-over-content button,
+.game-over-content a {
+  display: block;
+  margin: 10px auto;
+  background-color: grey;
+  color: white;
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  font-family: "Garamond", serif;
+  text-decoration: none;
+  width: 100px;
+}
+
+/* Mengatur gaya untuk elemen dengan class 'game-logo' */
+.game-logo {
+  width: 85px;
+  margin: 20px auto;
+  display: block;
+}

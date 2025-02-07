@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membasmi Hantu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <audio id="background-music" loop autoplay>
+        <source src="asset/sound/backsound.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="click-sound">
+        <source src="asset/sound/soound.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="welcome">
+        <div class="box-menu" id="start-game-box">
+            <h3 class="game-title">Membasmi Hantu</h3>
+            <img src="asset/hantu.png" alt="Game Logo" class="game-logo">
+            Masukkan Username<br>
+            <input type="text" id="username"><br>
+            Pilih Level <br>
+            <select id="level">
+                <option>Easy</option>
+                <option>Medium</option>
+                <option>Hard</option>
+            </select> <br>
+            <button id="mulai">Start Game!</button>
+            <a href="petunjuk.html">Petunjuk Bermain</a>
+        </div>
+
+        <div class="box-leaderboard" id="leaderboard-box">
+            <h3>Leaderboard</h3>
+            <ul id="leaderboard"></ul>
+            <button id="hapus-leaderboard">Hapus Leaderboard</button>
+        </div>
+    </div>
+
+    <div id="out-score">
+        USERNAME : <span id="user" style="margin-right: 800px;"></span>
+        SCORE : <span id="score">0</span>
+        |
+        TIME : <span id="time">7</span>
+    </div>
+
+    <div id="game-over" style="display: none;">
+        <br><br>
+        <img src="asset/hantu.png" width="120">
+        <h1>Game Over</h1>
+        Username: <span id="over-user"></span><br>
+        Score: <h1 id="over-score"></h1>
+        <button id="simpan">Simpan Score</button><br><br>
+        <a href="index.html">Restart</a>
+    </div>
+
+    <div id="container"></div>
+
+    <script type="text/javascript" src="hantu.js"></script>
+</body>
+
+</html>
